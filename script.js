@@ -1,62 +1,92 @@
-/* SOM */
-function tocarSom() {
-  const som = document.getElementById("somClick");
-  if (som) {
-    som.currentTime = 0;
-    som.play();
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4a2c2a;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 30px 20px;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  margin: 10px 0;
+  cursor: pointer;
+  background: #ff6f91;
+  color: white;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+  background: #ff4f79;
+}
+
+button.secondary {
+  background: #f3a6b5;
+}
+
+.alert {
+  margin-top: 15px;
+  color: #b00020;
+  font-size: 0.95rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.final {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-}
-
-/* TROCA DE TELAS */
-function trocarTela(atual, proxima) {
-  const telaAtual = document.getElementById(atual);
-  const telaProxima = document.getElementById(proxima);
-
-  telaAtual.classList.remove("ativa");
-
-  setTimeout(() => {
-    telaProxima.classList.add("ativa");
-  }, 300);
-}
-
-/* TELA 1 */
-function nomeSim() {
-  trocarTela("tela1", "tela2");
-}
-
-/* BOTÃO NÃO FUGINDO */
-function fugir() {
-  const botao = event.target;
-
-  const x = Math.random() * 200 - 100;
-  const y = Math.random() * 200 - 100;
-
-  botao.style.transform = `translate(${x}px, ${y}px)`;
-}
-
-/* TELA 2 */
-function verificarData() {
-  const data = document.getElementById("data").value.trim();
-  const erro = document.getElementById("erroData");
-
-  if (data === "23/05/2008") {
-    erro.innerText = "";
-    trocarTela("tela2", "tela3");
-  } else {
-    erro.innerText = "errado burrinha";
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-}
-
-/* TELA 3 */
-function conheceJoao(resposta) {
-  if (resposta) {
-    trocarTela("tela3", "tela4");
-  } else {
-    alert("Tem certeza? 🤨");
-  }
-}
-
-/* TELA 4 */
-function gostaSim() {
-  trocarTela("tela4", "telaFinal");
 }
