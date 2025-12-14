@@ -48,9 +48,20 @@ function conheceJoaoNao() {
 
 /* TELA 4 */
 function gostaSim() {
-  mostrar('telaFinal');
+  mostrar('tela5');
 }
 
 function gostaNao() {
-  alert('Tudo bem… mas precisava tentar 🤍');
+  alert('Tudo bem mas precisava tentar');
+}
+
+/* TELA 5 */
+function verificarFruta() {
+  const fruta = document.getElementById('fruta').value.trim().toLowerCase();
+
+  if (fruta === 'uva') {
+    mostrar('telaFinal');
+  } else {
+    document.getElementById('erro5').classList.remove('hidden');
+  }
 }
