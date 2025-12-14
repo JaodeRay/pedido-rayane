@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Emojis flutuando no fundo */
+body::before {
+  content: "💖 💙 💕 💗 💞 💘 💓";
+  position: fixed;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  font-size: 2rem;
+  opacity: 0.15;
+  animation: coracoes 25s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes coracoes {
+  from { transform: translateY(0); }
+  to { transform: translateY(100vh); }
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 25px;
+  text-align: center;
+  z-index: 1;
+}
+
+.tela {
+  display: none;
+  animation: fade 0.6s ease;
+}
+
+.tela.ativa {
+  display: block;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 15px;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: white;
+  color: #203a43;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.erro {
+  color: #ffb3b3;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Emojis dentro das telas */
+.emoji {
+  font-size: 2rem;
+  margin: 10px 0 20px;
+}
+
+.emoji.final {
+  font-size: 2.5rem;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
