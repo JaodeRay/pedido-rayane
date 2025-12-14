@@ -12,20 +12,20 @@
 
     <!-- TELA 1 -->
     <div id="tela1">
-      <h1>Oi</h1>
-      <p>Seu nome é Rayane?</p>
+      <h1>Oi…</h1>
+      <p>Seu nome é Rayane Maxima?(a mais linda no caso)</p>
 
       <button onclick="nomeSim()">Sim</button>
       <button class="secondary" onclick="nomeNao()">Não</button>
 
       <div id="erro1" class="alert hidden">
-        então acho que essa mensagem não é pra você
+       então acho que essa mensagem não era pra você
       </div>
     </div>
 
     <!-- TELA 2 -->
     <div id="tela2" class="hidden">
-      <h1>Só pra confirma</h1>
+      <h1>Só pra confirmar</h1>
       <p>Qual é a sua data de nascimento?</p>
 
       <input
@@ -40,7 +40,7 @@
       <button onclick="verificarData()">Confirmar</button>
 
       <div id="erro2" class="alert hidden">
-        errado burrinha,escreve certo vai
+        Você sabe, escreve direito burrinha
       </div>
     </div>
 
@@ -59,24 +59,44 @@
 
     <!-- TELA 4 -->
     <div id="tela4" class="hidden">
-      <h1>E entao?</h1>
+      <h1>E então?</h1>
       <p>Você gosta dele?</p>
 
       <button onclick="gostaSim()">Sim</button>
       <button class="secondary" onclick="gostaNao()">Não</button>
     </div>
 
+    <!-- TELA 5 - FRUTA -->
+    <div id="tela5" class="hidden">
+      <h1>Só mais uma</h1>
+      <p>Qual é a fruta que ele mais compra pra você?</p>
+
+      <input
+        type="text"
+        id="fruta"
+        placeholder="Digite aqui"
+      >
+
+      <button onclick="verificarFruta()">Responder</button>
+
+      <div id="erro5" class="alert hidden">
+        não é essa tenta lembrar direitinho
+      </div>
+    </div>
+
     <!-- TELA FINAL -->
     <div id="telaFinal" class="hidden">
-      <h1>Então deixa eu ser sincero…</h1>
-     <p class="final">
+      <h1>Então deixa eu ser sincero</h1>
+      <p class="final">
         Eu sei que errei.<br><br>
         Mas eu gosto muito de você.<br>
         Gosto mais do que sei explicar.<br><br>
         Eu amo tudo em você garota, sua voz,<br><br>
-        seu sorriso, seu cabelo, seus olhos, <br><br>
-        esse seu jeito, tudo, eu sei que eu vacilei<br><br>
-        e não precisa ser agora, mas eu espero que você me perdoe<br><br>
+        seu sorriso, seu cabelo, seus olhos,<br><br>
+        esse seu jeito, tudo…<br><br>
+        Eu sei que eu vacilei,<br>
+        e não precisa ser agora,<br>
+        mas eu espero que você me perdoe.<br><br>
         Te amo mais do que tudo 🤍
       </p>
     </div>
@@ -86,6 +106,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
