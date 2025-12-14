@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💙 Para Você</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- TELA 1 -->
+    <div class="tela ativa" id="tela1">
+      <h1>❓❓❓</h1>
+      <p>Seu nome é Rayane?</p>
+
+      <div class="emoji">💙💖💙</div>
+
+      <div class="botoes">
+        <button onclick="tocarSom(); nomeSim()">Sim</button>
+        <button id="btnNao" onmouseover="fugir()">Não</button>
+      </div>
+    </div>
+
+    <!-- TELA 2 -->
+    <div class="tela" id="tela2">
+      <p>Qual sua data de nascimento?</p>
+
+      <div class="emoji">📅✨</div>
+
+      <input 
+        type="text" 
+        id="data" 
+        placeholder="DD/MM/AAAA"
+        inputmode="numeric"
+      >
+
+      <button onclick="tocarSom(); verificarData()">Confirmar</button>
+      <p class="erro" id="erroData"></p>
+    </div>
+
+    <!-- TELA 3 -->
+    <div class="tela" id="tela3">
+      <p>Você conhece algum João?</p>
+
+      <div class="emoji">💭</div>
+
+      <div class="botoes">
+        <button onclick="tocarSom(); conheceJoao(true)">Sim</button>
+        <button id="btnNao" onmouseover="fugir()">Não</button>
+      </div>
+    </div>
+
+    <!-- TELA 4 -->
+    <div class="tela" id="tela4">
+      <p>Você gosta dele?</p>
+
+      <div class="emoji">💘</div>
+
+      <div class="botoes">
+        <button onclick="tocarSom(); gostaSim()">Sim</button>
+        <button id="btnNao" onmouseover="fugir()">Não</button>
+      </div>
+    </div>
+
+    <!-- TELA FINAL -->
+    <div class="tela" id="telaFinal">
+      <h1>💖</h1>
+
+      <div class="emoji final">💙💙💙</div>
+
+      <p>
+        Rayane,<br><br>
+
+        eu sei que erro,<br>
+        mas cada erro meu<br>
+        não muda o quanto eu te amo.<br><br>
+
+        Você é a melhor parte dos meus dias,<br>
+        e eu não quero te perder nunca.<br><br>
+
+        Me desculpa 💙<br>
+        Eu te amo mais que tudo.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- SOM -->
+  <audio id="somClick" src="sons/click.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
